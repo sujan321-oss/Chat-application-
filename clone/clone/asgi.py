@@ -10,7 +10,8 @@ https://docs.djangoproject.com/en/4.1/howto/deployment/asgi/
 import os
 from whatsapp import consumer
 from whatsapp import routing
-from whatsapp.routing import websocket_urlspatterns
+
+# from whatsapp.routing import websocket_urlspatterns
 
 from django.core.asgi import get_asgi_application
 
@@ -22,3 +23,4 @@ application = ProtocolTypeRouter({
     "websocket":URLRouter(routing.websocket_urlspatterns)  
     
 })
+app=application
